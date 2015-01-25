@@ -23,7 +23,11 @@ gulp.task('html', ['css'], function() {
 
 gulp.task('images', function() {
   gulp.src('./src/imgs/*')
-  .pipe(minifyImages())
+  .pipe(minifyImages({
+    optimizationLevel: 7,
+    progressive: true,
+    interlaced: true
+  }))
   .pipe(gulp.dest('./dist/imgs/'))
 });
 
