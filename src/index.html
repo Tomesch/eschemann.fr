@@ -5,9 +5,7 @@
     <title>Thomas Eschemann / Software engineer</title>
     <meta name="viewport" content="initial-scale=1">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,300'
-    rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link inline rel="stylesheet" type="text/css" href="/css/style.css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -129,5 +127,16 @@
                 href="mailto:%74%68%6F%6D%61%73%40%65%73%63%68%65%6D%61%6E%6E%2E%66%72"></a>.</p>
           </div>
         </div> 
+        <script>
+          var cb = function() {
+            var l = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = '//fonts.googleapis.com/css?family=Open+Sans:700,300';
+            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+          };
+          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+          if (raf) raf(cb);
+          else window.addEventListener('load', cb);
+        </script>
       </body>
     </html>
