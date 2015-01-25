@@ -45,7 +45,7 @@ p {
   color: #fff;
 }
 .dark {
-  color: #000;
+  color: #333;
 }
 .container {
   padding: 20px;
@@ -58,6 +58,9 @@ p {
 }
 h1 {
   font-size: 1.5em;
+}
+.emph, .emph:after {
+  color: #21A3A3; 
 }
 @media (min-width: 768px) {
   h1 {
