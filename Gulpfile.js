@@ -17,7 +17,7 @@ gulp.task('css', function () {
 gulp.task('html', ['css'], function() {
   gulp.src('./src/*.html')
   .pipe(inlinesource({rootpath: './dist'}))
-  .pipe(minifyHTML())
+  .pipe(minifyHTML({comments: true}))
   .pipe(gulp.dest('./dist/'))
 });
 
